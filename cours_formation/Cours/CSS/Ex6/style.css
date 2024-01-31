@@ -1,0 +1,30 @@
+div, p{
+    height: 200px;
+    width: 200px;
+    margin: 50px 10px;
+    border: 2px solid black;
+}
+
+div:nth-child(1){
+    background: linear-gradient(to bottom left, red, green, blue);
+}
+
+div:nth-child(2){
+    background: linear-gradient(-70deg, yellow, rgb(170, 42, 170)25%);
+}
+
+p{
+    background: linear-gradient(white,rgba(0,0,0,0.5));
+}
+
+div:nth-of-type(3){
+    background: radial-gradient(lightblue, pink);
+}
+
+div:nth-of-type(4){
+    background: repeating-radial-gradient(circle at center, black, white 10px);
+}
+
+div:nth-of-type(4):hover{
+    background: repeating-radial-gradient(circle at center, white, black 10px);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="baniere">
+            <img src="https://picsum.photos/800/200" alt="image">
+        </div>
+        <h1>Un Gros Titre</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Gallerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form action="/ma-page-php" method="post">
+            <fieldset>
+                <legend>Contact</legend>
+                <div>
+                    <label for="nom" class="label-important">Nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex : Robert" minlength="2" maxlength="20" required>
+                </div>
+                <div>
+                    <label for="email" class="label-important">E-mail :</label>
+                    <input type="email" name="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div>
+                    <label for="textarea">Laissez un commentaire</label><br>
+                    <textarea name="textarea" id="textarea" cols="70" rows="10" placeholder="Votre message ici"></textarea>  
+                </div> 
+                <div>
+                    <input type="checkbox" name="copie" id="checkbox" checked>
+                    <label for="copie">Envoyer une copie par E-mail !</label>
+                </div>
+                <input type="button" value="Envoyer">
+                <input type="button" value="Reset">                           
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="https://www.google.com">Menu 1</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/select">Menu 2</a></li>
+            <li><a href="https://picsum.photos/">Menu 3</a></li>
+            <li><a href="https://www.amazon.com">Menu 4</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

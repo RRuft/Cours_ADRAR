@@ -1,0 +1,70 @@
+.container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto;
+}
+
+h1{
+    justify-self: center;
+}
+
+.article-container{
+    border: 1px solid blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+}
+
+article{
+    width: 50%;
+}
+
+
+.article-right{
+   align-self: flex-end;
+}
+
+.article-right > p{
+    background-color: lightgray;
+}
+
+p{
+    margin-right: 10px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.list-container{
+    justify-self: center;
+    align-self: center;
+    border: 1px solid blue;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.form-container{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    align-self: center;
+    grid-column: 1 / span 2; /* la ligne dont je me suis inspiré quand j'ai tourné la tête à droite */
+}
+
+#pseudo{
+    width: 72%;
+    border-radius: 10px;
+}
+
+.form-container > p {
+    display: flex;
+    align-items: center;
+}

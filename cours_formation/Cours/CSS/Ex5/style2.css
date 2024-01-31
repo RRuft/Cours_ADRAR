@@ -1,0 +1,11 @@
+body{
+    background-color: blueviolet;
+}
+
+div{
+    width: 800px;
+    height: 400px;
+    background-color: blue;
+    margin: 300px 500px;
+    box-shadow: -8px -8px 15px white, 8px 8px 15px black;
+}

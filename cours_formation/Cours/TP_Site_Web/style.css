@@ -1,0 +1,70 @@
+body{
+    background: radial-gradient(circle at top, #CCDAE0, #EDF2F4);
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    color: #EF233C;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3{
+    color: #2B2D42;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+}
+
+article{
+    border: 1px solid black;
+}
+
+.image-article{
+    border: 2px solid #8D99AE;
+}
+
+.container{
+    text-align: center;
+}
+
+footer{
+    text-align: right;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: #D90429;
+}
+
+a:visited{
+    color: gray;
+}
+
+a:hover{
+    color: #2B2D42;
+}
+
+.label-important:after{
+    content: "*";
+    color: red;
+}
+
+h2{
+    color: #EF233C;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.imageV2{
+    text-align: center;
+}

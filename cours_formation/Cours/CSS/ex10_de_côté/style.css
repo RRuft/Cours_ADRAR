@@ -1,0 +1,43 @@
+.container{
+    width: 400px;
+    height: 250px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+h1{
+    text-align: center;
+}
+
+.container-btn{
+    text-align: center;
+}
+
+.label1{
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.label2{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.btn-form{
+    margin-top: 20px;
+    padding: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color: lightgray;
+    color: black;
+}
+
+.btn-form:hover{
+    background-color: black;
+    color: lightgray;
+}
+
+form > div:first-child, div:nth-child(2){
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

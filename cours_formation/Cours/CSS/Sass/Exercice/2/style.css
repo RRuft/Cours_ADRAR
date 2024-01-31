@@ -1,0 +1,9 @@
+ul li:nth-child(even) {
+  color: aqua;
+}
+ul:hover li:nth-child(odd) {
+  color: aqua;
+}
+ul:hover li:nth-child(even) {
+  color: black;
+}/*# sourceMappingURL=style.css.map */

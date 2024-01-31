@@ -1,0 +1,18 @@
+$color: aqua;
+$color2: black;
+
+ul{  
+    li{
+        &:nth-child(even){
+            color: $color;
+        }
+    }
+    &:hover{    
+        li:nth-child(odd){
+            color: $color;
+        }
+        li:nth-child(even){
+            color: $color2;
+        }
+    }
+}

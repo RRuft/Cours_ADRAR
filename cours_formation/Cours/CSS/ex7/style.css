@@ -1,0 +1,18 @@
+caption{
+    color: purple;
+    font-weight: bold;
+}
+
+table{
+    border-collapse: collapse;
+    border: thick double purple;
+}
+
+th{
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+td{
+    border: 2px solid black;
+}

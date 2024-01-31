@@ -1,0 +1,40 @@
+.container{
+    border: 2px solid black;
+    height: 40rem;
+    width: 80rem;
+}
+.container div:first-child{
+    background-color: #00ffff65;
+    width: 8em;
+    height: 7em;
+    position: absolute;
+    left: 5em;
+    z-index: 2;
+}
+.container div:nth-child(2){
+    background-color: rgba(255, 0, 0, 0.452);
+    width: 9em;
+    height: 5em;
+}
+.container div:nth-child(3){
+    background-color: rgba(137, 43, 226, 0.459);
+    height: 9em;
+    width: 7em;
+    z-index: 3;
+    position: absolute;
+    left: 3em;
+    top: 2em;
+}
+.container div:last-child{
+    background-color: rgba(172, 255, 47, 0.363);
+    width: 6em;
+    height: 7em;
+    position: relative;
+    z-index: 1;
+}
+.container div:last-child::before{
+    content:"TEST";
+}
+.container div:last-child::after{
+    content:"TEST";
+}

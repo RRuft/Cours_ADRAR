@@ -1,0 +1,72 @@
+$largeur: 20em;
+$coin: 4px;
+$color1:  #e8a767;
+
+.container{
+    background-color: $color1;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+legend{
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 18em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#nom{
+    width: $largeur;
+    border-radius: $coin;
+}
+
+#prenom{
+    width: $largeur;
+    border-radius: $coin;
+}
+
+#age{
+    width: $largeur;
+    border-radius: $coin;
+}
+
+#sexe{
+    width: $largeur;
+    border-radius: $coin;
+}
+
+#classe{
+    width: $largeur;
+    border-radius: $coin;
+}
+
+#principale{
+    width: 8em;
+    border-radius: $coin;
+}
+
+#secondaire{
+    width: 8em;
+    border-radius: $coin;
+}
+
+#avatar{
+    width: 8em;
+    border-radius: $coin;
+}
+
+#bouton{
+    width: 6em;
+    border-radius: $coin;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-self: center;
+}

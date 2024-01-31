@@ -1,0 +1,74 @@
+/* h1{
+    text-align: center;
+    color: red;
+    font-size: 5vh;
+}
+
+h3{
+    color: blue;
+    font-size: 3vh;
+}
+
+p{
+    background-color: gray;
+}
+
+article + article + article p{
+    background-color: pink;
+}
+
+strong{
+    font-weight: 400;
+    color: yellowgreen;
+}
+
+em{
+    font-style: normal;
+    text-decoration: underline;
+    color: orange;
+    font-size: 1.3em;
+}
+
+.classe{
+    text-align: right;
+    color: green;
+    text-decoration: underline;
+} */
+
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 3rem;
+}
+
+h3 {
+    color: blue;
+    font-size: 2rem;
+}
+
+article{
+    background: lightgray;
+}
+
+article:last-of-type{
+    background-color: pink;
+}
+
+strong{
+    font-weight: lighter;
+    color: yellowgreen;
+    font-size: 1.2rem;
+}
+
+em {
+    font-style: normal;
+    font-size: 1.2rem;
+    color: orange;
+    text-decoration: underline;
+}
+
+h3:nth-of-type(2){
+    color: green;
+    text-decoration: underline;
+    text-align: right;
+}

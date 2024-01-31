@@ -1,0 +1,68 @@
+.container {
+  background-color: #e8a767;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+legend {
+  font-size: large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 18em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#nom {
+  width: 20em;
+  border-radius: 4px;
+}
+
+#prenom {
+  width: 20em;
+  border-radius: 4px;
+}
+
+#age {
+  width: 20em;
+  border-radius: 4px;
+}
+
+#sexe {
+  width: 20em;
+  border-radius: 4px;
+}
+
+#classe {
+  width: 20em;
+  border-radius: 4px;
+}
+
+#principale {
+  width: 8em;
+  border-radius: 4px;
+}
+
+#secondaire {
+  width: 8em;
+  border-radius: 4px;
+}
+
+#avatar {
+  width: 8em;
+  border-radius: 4px;
+}
+
+#bouton {
+  width: 6em;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-self: center;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+h1{
+    text-shadow: 15px -10px 3px violet;
+}
+
+p{
+    box-shadow: 0px 0px 20px rgb(238, 85, 111);
+}
+
+p+p{
+    box-shadow: -8px 8px 8px yellowgreen;
+}

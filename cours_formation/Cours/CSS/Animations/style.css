@@ -1,0 +1,6 @@
+img:hover{
+    transform: scale(2);
+}
+img:active{
+    transform: rotate(180deg) scale(2);
+}
