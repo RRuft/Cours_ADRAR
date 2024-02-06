@@ -18,7 +18,7 @@
     <a href="#">supprimer la classe</a>
     <a href="#">toggle</a>
 
-    <form action="">
+    <form action="" method="post">
         <label for="text">Title</label>
         <br>
         <input type="text" name="text" id="">
@@ -26,9 +26,16 @@
         <label for="text">Title</label>
         <br>
         <input type="text" name="text" id="">
-
+        <br><br>
+        <label for="textarea">Un commentaire ?</label>
+        <br>
+        <textarea name="textarea" id="textarea" cols="60" rows="5"></textarea>
+        <br>
+        <input type="button" value="Submit" class="button" id="button">
     </form>
 
+    <div class="formRender" id="formRender"></div>
+
     <img src="https://picsum.photos/1920/1080" alt="">
     <img src="https://picsum.photos/1920/1080" alt="">
     <img src="https://picsum.photos/1920/1080" alt="">
@@ -36,6 +43,9 @@
     <img src="https://picsum.photos/1920/1080" alt="">
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"
+    integrity="sha512-t1jq1b5U4hgz4lQoeyRD9QiVu99KxjyA939fnND+R+gLOHmuT5F9YFHJI1Nse1B1QG6/U11SPAc8fshYshb6MA=="
+    crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
