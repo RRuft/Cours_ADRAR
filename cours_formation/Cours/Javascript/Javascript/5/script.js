@@ -32,20 +32,192 @@
 
 //todo Découverte TRY Catch
 
-try{
-    prenom
-    alert('Bonjour');  
-}catch(err){
-    console.log(err);
-        alert(`Erreur Détectée ALERTE STOPPEZ TOUT: 
-            -----------
-            Le Nom de l'erreur 
-            ${err.name}
-            -----------
-            Le Message de l'erreur  :
-            ${err.message}
-            ----------
-            L'emplacement de l'erreur:
-            ${err.stack}`);
+// try{
+//     prenom
+//     alert('Bonjour');  
+// }catch(err){
+//     console.log(err);
+//         alert(`Erreur Détectée ALERTE STOPPEZ TOUT: 
+//             -----------
+//             Le Nom de l'erreur 
+//             ${err.name}
+//             -----------
+//             Le Message de l'erreur  :
+//             ${err.message}
+//             ----------
+//             L'emplacement de l'erreur:
+//             ${err.stack}`);
+// }
+// alert(`Ce message s'affiche correctement`);
+
+// function division(){
+//     let x = prompt('Entrez un premier nombre (numérateur)');
+//     let y = prompt('Entrez un deuxième nombre (dénominateur)');
+    
+//     if(isNaN(x) || isNaN(y) || x == '' || y == ''){
+//         throw new Error('Merci de rentrer deux nombres');
+//     }else if(y == 0 || x == 0){
+//         throw new Error('Division avec 0 impossible')
+//     }else{
+//         alert(x / y);
+//     }
+// }
+
+// division();
+
+//!Exercice API meteo latitude
+
+// //? ↓ On declare la variable apiDiv et on lui assigne la div qui a la classe apiContact
+// const apiDiv = document.querySelector('.apiContact');
+// //? ↓ rend la fonction "async" pour permettre la réponse de l'API.
+// const contactAPI = async ()=>{
+//     //? ↓ le await permet de dire à notre variable d'attendre la réponse de l'API
+//     const data = await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m");
+//     console.log(data);
+//     //? ↓ le .json permet de traduire les donnés en JS afin qu'elle soit compréhenssible par notre code
+//     const dataTransformed = await data.json();
+//     console.log(dataTransformed);
+//     apiDiv.innerText = dataTransformed.latitude; // ou dataTransformed['latitude']
+// }
+// contactAPI();
+
+
+//* Exercice API Pokémon et magic
+// const apiDiv = document.querySelector('.container-magic-card');
+// const requestApi = ()=>{
+//     fetch('https://api.magicthegathering.io/v1/cards')
+//     .then(response => response.json())
+//     .then((card) =>{
+//         for(let i=0;i<20;i++){
+//             apiDiv.innerText += card.cards[i].name + "\n";
+
+//         }
+//     })
+// };
+// requestApi();
+
+
+// const listDiv = document.querySelector("#pokeListe");
+
+// let pokeAPI = async () => {
+
+//     let poke = await fetch("https://pokeapi.co/api/v2/pokemon");
+//     console.log(poke);
+
+//     let pokeTransformed = await poke.json();
+//     console.log(pokeTransformed);
+//     for  (let i = 0; i < 20; i++) {
+//         //? ↓ crée un élément "p"
+//         let newP = document.createElement("p");
+//         //? ↓ cherche dans l'api la valeur de poke dans le result incrémenté à chaque fois par la boucle pour parcourir le tableau.
+//         newP.innerText +=pokeTransformed.results[i]["name"];
+//         //? ↓ Applique le paragraphe à chaque résultat.
+//         listDiv.append(newP);
+//     }
+// };
+
+// pokeAPI();
+
+
+//! Exos avec SetTimeout
+
+// //? ↓ On declare la variable titre et on lui assigne comme valeur le titre h1 present dans le html
+// const title = document.querySelector('.mon-titre');
+// //? ↓ On declare la variable body et on lui assigne comme valeur le body
+// const body = document.querySelector('body');
+
+// //? ↓ On appelle la fonction setTimout et on lui indique une fonction à executé ainsi que la durée avant l'exécution de cette dernière 
+// setTimeout(()=>{
+//     title.innerText = 'Je suis le titre';
+//     body.style.backgroundColor = 'purple';
+// },3000);
+// //? ↑ le temps avant que la fonction ne s'execute est en ms
+
+
+//todo Exo setInterval
+
+// //? ↓ On déclare la variable myTitle, on lui assigne comme valeur la titre h3 du HTML
+// const myTitle = document.querySelector('.mon-titre-h3');
+// //? ↓ On déclare la variable timer, on lui assigne 3 comme valeur
+// let timer = 3;
+// //? ↓ On va écouter l'evenement click sur le h3 et déclancher une fonction quand cette evenement a lieu
+// myTitle.addEventListener('click',()=>{
+//     //? ↓ On déclare la variable countDown on lui assigne comme valeur la fonction setInterval qui contient une condition : SI la varibale timer est supérieur à 0 on réalise un certain code SINON on réalise l'autre option 
+//     const countDown = setInterval(()=>{
+//         if(timer>0){
+//             myTitle.innerText = timer;
+//             myTitle.style.color = 'purple';
+//             myTitle.style.backgroundColor ='yellowgreen';
+//         } else{
+//             myTitle.innerText = "GO GO GO";
+//             myTitle.style.color = 'red';
+//             myTitle.style.backgroundColor ='black';
+//             //? ↓ On clear le décompte de la varible timer qui se fait à cause de setInterval
+//             clearInterval(countDown);
+//         }
+//         //? ↓ On décremente la valeur de timer 
+//         timer--;
+//     },1000);
+//     //? ↑ On donne une valeur en ms qui relancera la fonction présente dans le addEventListener du myTitle
+// });
+
+//* LES CLASSES
+
+class UserProfile {
+    //! Pas besoin de déclarer function devant le constructor et méthodes
+    constructor(nameUser, mailUser, phoneUser) {
+        // Attribut en IN MODE
+        this.nameUser = nameUser;
+        this.mailUser = mailUser;
+        this.phoneUser = phoneUser;
+        // Attribut en outMode
+        this.contact = phoneUser + mailUser;
+        this.resume = this.getProfileInfo();
+
+        // this._nom = nom;  
+    }
+    getProfileInfo() {
+        console.log('this ',this);
+        return `infos de l'utilisateur : 
+                son nom : ${this.nameUser}
+                son mail : ${this.mailUser}
+                son Tél : ${this.phoneUser}`;
+    }
 }
-alert(`Ce message s'affiche correctement`);
+
+const exampleUser1 = new UserProfile("José", "jose@gmail.com", "09876543");
+const exampleUser2 = new UserProfile("Sarah", "sarah@gmail.com", "063736252");
+exampleUser2.getProfileInfo();
+
+
+//!Exo Class IMC
+class Imc{
+    constructor(nom,poids,taille){
+        this.nom = nom;
+        this.poids = poids;
+        this.taille = taille;
+    }
+    calculIMC(poids, taille){
+        return poids/taille*taille;
+    }
+    display(){
+        console.log(this.nom,this.poids,this.taille)
+    }
+}
+
+
+
+
+
+
+// //* progr principal -> on fait l'injection des données
+let list = [
+    new Imc("Sébastien Chabal", 135, 1.7),
+    new Imc("Escaladeuse", 45, 1.68),
+    new Imc("JOJO ", 300, 2),
+    new Imc("Gontrand ", 90, 1.75),
+    new Imc("Colonel Clock ", 200, 1.75),
+    new Imc("JOsiane de la Vega", 99, 1.55),
+];
+  //*Boucle forEach qui parcourt le tableau avec une variable temporaire uneCase
+list.forEach((uneCase) => uneCase.display());
