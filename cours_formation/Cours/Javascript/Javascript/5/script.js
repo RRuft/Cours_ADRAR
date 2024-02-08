@@ -163,61 +163,116 @@
 
 //* LES CLASSES
 
-class UserProfile {
-    //! Pas besoin de déclarer function devant le constructor et méthodes
-    constructor(nameUser, mailUser, phoneUser) {
-        // Attribut en IN MODE
-        this.nameUser = nameUser;
-        this.mailUser = mailUser;
-        this.phoneUser = phoneUser;
-        // Attribut en outMode
-        this.contact = phoneUser + mailUser;
-        this.resume = this.getProfileInfo();
+// class UserProfile {
+//     //! Pas besoin de déclarer function devant le constructor et méthodes
+//     constructor(nameUser, mailUser, phoneUser) {
+//         // Attribut en IN MODE
+//         this.nameUser = nameUser;
+//         this.mailUser = mailUser;
+//         this.phoneUser = phoneUser;
+//         // Attribut en outMode
+//         this.contact = phoneUser + mailUser;
+//         this.resume = this.getProfileInfo();
 
-        // this._nom = nom;  
-    }
-    getProfileInfo() {
-        console.log('this ',this);
-        return `infos de l'utilisateur : 
-                son nom : ${this.nameUser}
-                son mail : ${this.mailUser}
-                son Tél : ${this.phoneUser}`;
-    }
-}
+//         // this._nom = nom;  
+//     }
+//     getProfileInfo() {
+//         console.log('this ',this);
+//         return `infos de l'utilisateur : 
+//                 son nom : ${this.nameUser}
+//                 son mail : ${this.mailUser}
+//                 son Tél : ${this.phoneUser}`;
+//     }
+// }
 
-const exampleUser1 = new UserProfile("José", "jose@gmail.com", "09876543");
-const exampleUser2 = new UserProfile("Sarah", "sarah@gmail.com", "063736252");
-exampleUser2.getProfileInfo();
-
-
-//!Exo Class IMC
-class Imc{
-    constructor(nom,poids,taille){
-        this.nom = nom;
-        this.poids = poids;
-        this.taille = taille;
-    }
-    calculIMC(poids, taille){
-        return poids/taille*taille;
-    }
-    display(){
-        console.log(this.nom,this.poids,this.taille)
-    }
-}
+// const exampleUser1 = new UserProfile("José", "jose@gmail.com", "09876543");
+// const exampleUser2 = new UserProfile("Sarah", "sarah@gmail.com", "063736252");
+// exampleUser2.getProfileInfo();
 
 
+// //!Exo Class IMC
+// class Imc{
+//     constructor(nom,poids,taille){
+//         this.nom = nom;
+//         this.poids = poids;
+//         this.taille = taille;
+//         this.imc = (this.poids/(this.taille*this.taille)).toFixed(2);
+//     }
 
+//     display(){
+//         console.log(`Nom : ${this.nom}, Poids : ${this.poids}, Taille : ${this.taille}, IMC : ${this.imc}`);
+//     }
+// }
 
+// // //* progr principal -> on fait l'injection des données
+// let list = [
+//     new Imc("Sébastien Chabal", 135, 1.7),
+//     new Imc("Escaladeuse", 45, 1.68),
+//     new Imc("JOJO ", 300, 2),
+//     new Imc("Gontrand ", 90, 1.75),
+//     new Imc("Colonel Clock ", 200, 1.75),
+//     new Imc("JOsiane de la Vega", 99, 1.55),
+// ];
+//   //*Boucle forEach qui parcourt le tableau avec une variable temporaire uneCase
+// list.forEach((uneCase) => uneCase.display());
 
+// //todo Exo Class PME
+// class Employee{
+//     constructor(nom,prenom,age,salaire){
+//         this.nom = nom;
+//         this.prenom = prenom;
+//         this.age = age;
+//         this.salaire = salaire;
+//         this.cout = this.calculCout();
+//     }
+//     calculCout(){
+//         return this.salaire*12*(1+0.9);
+//     }
+//     getCout(){
+//         return this.cout;
+//     }
+// }
 
-// //* progr principal -> on fait l'injection des données
-let list = [
-    new Imc("Sébastien Chabal", 135, 1.7),
-    new Imc("Escaladeuse", 45, 1.68),
-    new Imc("JOJO ", 300, 2),
-    new Imc("Gontrand ", 90, 1.75),
-    new Imc("Colonel Clock ", 200, 1.75),
-    new Imc("JOsiane de la Vega", 99, 1.55),
-];
-  //*Boucle forEach qui parcourt le tableau avec une variable temporaire uneCase
-list.forEach((uneCase) => uneCase.display());
+// class Pme{
+//     constructor(nom,equipe,ventes,coutfixes,achat){
+//         this.nom = nom;
+//         this.equipe = equipe;
+//         this.ventes = ventes;
+//         this.coutfixes = coutfixes;
+//         this.achat = achat;
+//         this.coutTotal = this.coutTotal();
+//         this.coutInitial = achat + coutfixes;
+//         this.bilan = this.bilan();
+//     }
+//     coutTotal(){
+//         let coutEquipe = 0;
+//         this.equipe.forEach((element) => {
+//             coutEquipe += element.cout;
+//         });
+//         return coutEquipe;
+//     }
+//     bilan(){
+//         let bilan = this.ventes - this.coutInitial - this.coutTotal;
+//         return bilan;
+//     }
+//     bilanCalculed(){
+//         console.log(`
+//         ${this.nom} : Cout Initial : ${this.coutInitial} 
+//         ${this.nom} : Cout total equipe : ${this.coutTotal}
+//         ${this.nom} : Ventes : ${this.ventes}
+//         ${this.nom} : Bilan : ${this.bilan}`);
+//     }
+// };
+
+// const pme = new Pme (
+//     //Le nom entreprise
+//     "Ma Petite Entreprise - ", 
+//       //L'equipe de salariés (un tableau)
+//     [new Employee ("Duval", "Paul", 30, 2000),
+//     new Employee ("Durand", "Alain", 40, 3000),
+//     new Employee ("Dois", "Sylvia", 50, 4000),],
+//        //le revenu , frais fixe, frais d'achat
+//     300000,
+//     20000,
+//     50000);
+// pme.bilanCalculed();
